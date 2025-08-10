@@ -1,12 +1,26 @@
-document.addEventListener('DOMContentLoaded', () => {
+ document.addEventListener('DOMContentLoaded', () => {
             const pages = document.querySelectorAll('.page');
             const navLinks = document.querySelectorAll('.nav-links a');
             const logoLink = document.querySelector('.logo a');
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinksContainer = document.getElementById('nav-links');
+
+            menuToggle.addEventListener('click', () => {
+                navLinksContainer.classList.toggle('open');
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 768) {
+                        navLinksContainer.classList.remove('open');
+                    }
+                });
+            });
 
             function showPageFromHash() {
                 const hash = window.location.hash || '#home';
                 
-                // Convert hash to a valid element ID (e.g., #blockchain/smart-contracts -> blockchain-smart-contracts)
+                // Convert hash to a valid element ID (e.g., #ai/machine-learning -> ai-machine-learning)
                 const pageId = hash.substring(1).replace('/', '-');
 
                 let pageFound = false;

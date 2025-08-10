@@ -9,12 +9,16 @@
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
+   <nav class="navbar">
         <div class="logo">
             <a href="#home">TechSphere</a>
         </div>
-        <ul class="nav-links">
+        <button class="menu-toggle" id="menu-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </button>
+        <ul class="nav-links" id="nav-links">
             <li><a href="#ai">AI</a></li>
             <li><a href="#cybersecurity">Cybersecurity</a></li>
             <li><a href="#quantum-computing">Quantum</a></li>
@@ -25,22 +29,50 @@
 
     <main>
         <!-- Home Page -->
-     <section id="home" class="page active">
-    <header class="hero" style="background-image: url('https://s7d1.scene7.com/is/image/dmqualcommprod/getting-personal-with-on-device-ai'); background-size: cover; background-position: center;">
-        <h1>The Frontiers of Technology</h1>
-        <p>An exploration of the digital and physical innovations shaping our future.</p>
-    </header>
-    <div class="content-section">
-        <h2>Explore Topics</h2>
-        <div class="card-container">
-            <a class="card-link" href="#ai"><div class="tech-card"><h3>Artificial Intelligence</h3><p>Creating smart machines capable of tasks that typically require human intelligence.</p></div></a>
-            <a class="card-link" href="#cybersecurity"><div class="tech-card"><h3>Cybersecurity</h3><p>Protecting computer systems and networks from information disclosure or theft.</p></div></a>
-            <a class="card-link" href="#quantum-computing"><div class="tech-card"><h3>Quantum Computing</h3><p>Harnessing quantum mechanics to solve problems beyond the reach of classical computers.</p></div></a>
-            <a class="card-link" href="#extended-reality"><div class="tech-card"><h3>Extended Reality (XR)</h3><p>Immersive technologies that merge the real and virtual worlds, including VR and AR.</p></div></a>
-            <a class="card-link" href="#robotics"><div class="tech-card"><h3>Robotics</h3><p>The design, construction, and operation of robots to automate tasks and assist humans.</p></div></a>
-        </div>
-    </div>
-</section>
+       <section id="home" class="page active">
+            <header class="hero" style="background-image: url('https://s7d1.scene7.com/is/image/dmqualcommprod/getting-personal-with-on-device-ai'); background-size: cover; background-position: center;">
+                <h1>The Frontiers of Technology</h1>
+                <p>An exploration of the digital and physical innovations shaping our future.</p>
+            </header>
+            
+            <!-- About Section -->
+            <div class="content-section">
+                <h2>About TechSphere</h2>
+                <p style="text-align: center; color: var(--text-secondary); max-width: 800px; margin: 0 auto 3rem auto;">
+                  Welcome to TechSphere — your guide to the breakthroughs shaping tomorrow. We simplify complex technologies like quantum computing, generative AI, and sustainable energy, showing you how they work and why they matter.
+
+We connect trends, innovations, and real-world impact, giving you the insight to navigate — and influence — the future.
+
+Join us as we explore the ever-changing world of technology, from space exploration to intelligent robotics, and everything in between.
+
+
+                </p>
+            </div>
+
+            <div class="content-section" style="padding-top: 0;">
+                <h2>Explore Topics</h2>
+                <div class="card-container">
+                    <a class="card-link" href="#ai"><div class="tech-card"><h3>Artificial Intelligence</h3><p>Creating smart machines capable of tasks that typically require human intelligence.</p></div></a>
+                    <a class="card-link" href="#cybersecurity"><div class="tech-card"><h3>Cybersecurity</h3><p>Protecting computer systems and networks from information disclosure or theft.</p></div></a>
+                    <a class="card-link" href="#quantum-computing"><div class="tech-card"><h3>Quantum Computing</h3><p>Harnessing quantum mechanics to solve problems beyond the reach of classical computers.</p></div></a>
+                    <a class="card-link" href="#extended-reality"><div class="tech-card"><h3>Extended Reality (XR)</h3><p>Immersive technologies that merge the real and virtual worlds, including VR and AR.</p></div></a>
+                    <a class="card-link" href="#robotics"><div class="tech-card"><h3>Robotics</h3><p>The design, construction, and operation of robots to automate tasks and assist humans.</p></div></a>
+                </div>
+            </div>
+             <!-- Contact Section on Home Page -->
+            <div class="content-section">
+                <h2>Contact Us</h2>
+                <p style="text-align: center; color: var(--text-secondary); max-width: 600px; margin: 0 auto 3rem auto;">
+                    Have a question, comment, or feedback? We'd love to hear from you. Please use the form below to get in touch with our team.
+                </p>
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you for your message!');">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
 
         <!-- ############# AI TOPIC START ############# -->
 
@@ -648,7 +680,6 @@
         <p>&copy; 2025 TechSphere. All rights reserved.</p>
         <p>Nellore, Andhra Pradesh, India</p>
     </footer>
-
-    <script src="./js/script.js"></script>
-</body>
+ <script src="./js/script.js"></script>
+    </body>
 </html>
